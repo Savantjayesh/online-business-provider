@@ -132,13 +132,7 @@
         <div class="shape"></div>
     </div>
     <form class="form1" action="/login" method="POST">
-        {% csrf_token %}
-
-                {% if error%}
-                <div class="alert alert-danger" role="alert">
-                    {{error}}
-                </div>
-                {% endif %}
+        
 
         <h3 style=" color: #ffffff;">Login Here</h3>
 

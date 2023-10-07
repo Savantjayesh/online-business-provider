@@ -260,28 +260,29 @@ footer{
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form class="form1" action="/singup">
+    <form class="form1" action="/singup" method="POST">
+        {% csrf_token %}
         <h3 style=" color: #ffffff;">Registr Now</h3>
      <div class="name">
-        <label for="username" class="lab" style=" color: #ffffff;">First Name</label>
+        <label for="username" class="lab" style=" color: #ffffff;" >First Name</label>
         <label for="username" class="lab" style=" color: #ffffff;">Medal Name</label>
         <label for="username" class="lab" style=" color: #ffffff;">Last Name</label>
         <br>
-        <input type="text" class="inp" placeholder="Enter First Name" id="username">
-        <input type="text" class="inp" placeholder="Entrt Medal Name" id="username">
-        <input type="text" class="inp" placeholder="Enter Last Name" id="username">
+        <input type="text" class="inp" placeholder="Enter First Name" name="first_name" id="username">
+        <input type="text" class="inp" placeholder="Entrt Medal Name" name="medal_name" id="username">
+        <input type="text" class="inp" placeholder="Enter Last Name" name="last_name" id="username">
     </div>
 
         <div class="Contact"><label for="number" class="lab" style=" color: #ffffff;">Contact No </label>
         <label for="password" class="Contact" style=" color: #ffffff;">Date Of Birth</label>
-        <input type="number"  placeholder="Contact No" id="number">
-        <input type="date" for="date" class="lab" style=" color: #ffffff;">
+        <input type="number"  placeholder="Contact No" name="contact" id="number">
+        <input type="date" for="date" class="lab" name="dirth_date" style=" color: #ffffff;">
 
         </div>
-        <div class="pass"><label for="number" class="lab1" style=" color: #ffffff;">Username </label>
+        <div class="pass"><label for="number" class="lab1"  style=" color: #ffffff;">Username </label>
             <label for="password" class="lab1" style=" color: #ffffff;">password</label>
-            <input type="text"  placeholder="Contact No" id="username">
-            <input type="password" for="password" placeholder="password" class="lab" style=" color: #ffffff;">
+            <input type="text"  placeholder="Contact No" name="user_name" id="username">
+            <input type="password" for="password" placeholder="password" name="password" class="lab" style=" color: #ffffff;">
     
             </div>
 

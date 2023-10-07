@@ -17,4 +17,15 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+class singup(models.Model):
+    first_name = models.CharField(max_length=15)
+    medal_name = models.CharField(max_length=15)
+    last_name = models.CharField(max_length=15)
+    contact = models.IntegerField()
+    birth_date = models.DateField()
+    user_name = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
     
+    def __str__(self):
+        return self.first_namename
