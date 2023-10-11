@@ -24,23 +24,24 @@
         <div>
             <h1 class=" text-black my-4 px-5">Contact Us</h1>
         </div>
-            <form action="/about">
+            <form action="/about" method="POST"></form>
+            {% csrf_token %}
                 <div class="from-group mx-5">
                      <label >Name</label>
-                     <input type="text" class="form-control" placeholder="Enter Full Name">
-                </div>
+                     <input type="text" class="form-control" name="name" placeholder="Enter Full Name">
+                </div><br>
                 <div class="from-group mx-5">
                      <label > Email Address</label>
-                     <input type="email" class="form-control"  placeholder="Enter a Email Address">
-                </div>
+                     <input type="email" class="form-control" name="email"  placeholder="Enter a Email Address">
+                </div><br>
                 <div class="from-group mx-5">
                      <label >Phone No</label>
-                     <input type="number" class="form-control"  placeholder="Enter a Mobile No">
-                </div>
+                     <input type="number" class="form-control" name="phone_no" placeholder="Enter a Mobile No">
+                </div><br>
                 <div class="from-group mx-5 mb-3">
                      <label > Tell Me What You Want To Contact Me</label>
-                     <textarea name="contact" class="form-control" id="contact" cols="110%" rows="2" placeholder="Type Here..."></textarea>
-                </div>
+                     <textarea name="contact" class="form-control" id="contact" name="query" cols="110%" rows="2" placeholder="Type Here..."></textarea>
+                </div><br>
                 <div class="from-group mx-5 mb-5">
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </div>
@@ -48,7 +49,7 @@
     </div>
 
 </body>
-</html>
+</html><br><br>
 {% endblock body %}
 
 
